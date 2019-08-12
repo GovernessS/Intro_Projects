@@ -26,4 +26,30 @@ class Calculator{
     public void setNumber2(int num2){
         this.number2 = num2;
     }
+
+    public int addNumber(int num1, int num2){
+        return num1 + num2;
+    }
+
+    public int subtractNumber(int num1, int num2){
+        return num1 - num2;
+    }
+
+    public int multiplyNumber(int num1, int num2){
+        return num1 * num2;
+    }
+
+    public int divideNumber(int num1, int num2){
+        int value = 0;
+        try{
+            value = num1 / num2;
+        } 
+        catch(ArithmeticException e){
+            System.out.println();
+            System.out.println("Error: Cannot divide by zero.");
+        }
+
+        return value;
+        
+    }
 }
